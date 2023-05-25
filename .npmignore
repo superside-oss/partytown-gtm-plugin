@@ -1,0 +1,33 @@
+# Source
+src
+
+# CI
+.gitlab-ci
+.gitlab-ci.yml
+
+# Config files
+.browserslistrc
+.commitlintrc.json
+.editorconfig
+.eslintignore
+.eslintrc.cjs
+.gitlab-ci
+.gitlab-ci.yml
+.lintstagedrc.cjs
+.prettierignore
+.prettierrc
+playwright.config.ts
+release.config.cjs
+tsconfig.build.json
+tsconfig.json
+vite.config.ts
+vite.preview.config.ts
+vitest.config.ts
+
+# Misc
+.yarn
+.husky
+docs
+public
+index.html
+CHANGELOG.md
