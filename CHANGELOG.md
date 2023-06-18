@@ -1,3 +1,10 @@
+## [1.0.0-alpha.8](https://github.com/superside-oss/partytown-gtm-plugin/compare/v1.0.0-alpha.7...v1.0.0-alpha.8) (2023-06-18)
+
+
+### 🔧 Fixes
+
+* use proper import ([cbde988](https://github.com/superside-oss/partytown-gtm-plugin/commit/cbde988fde0f6e1497e91c74db36ef234e2d73bd))
+
 ## [1.0.0-alpha.7](https://github.com/superside-oss/partytown-gtm-plugin/compare/v1.0.0-alpha.6...v1.0.0-alpha.7) (2023-06-18)
 
 
