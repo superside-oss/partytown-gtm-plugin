@@ -14,12 +14,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+
+      - name: Cache node modules
+        uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: yarn --frozen-lockfile
-      - run: yarn build
-      - run: yarn semantic-release
+          cache: 'yarn'
+
+      - name: 'Install dependencies'
+        run: yarn --frozen-lockfile
+
+      - name: 'Build'
+        run: yarn build
+
+      - name: 'Release'
+        run: yarn semantic-release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
