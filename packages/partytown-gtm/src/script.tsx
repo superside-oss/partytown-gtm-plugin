@@ -19,7 +19,7 @@ export const GTM_TAG_ASSISTANT_FORWARDER = '__TAG_ASSISTANT_FORWARDER';
 
 interface GTMScriptProps {
   gtmId: string;
-  skipPartytown: boolean;
+  skipPartytown?: boolean;
 }
 
 export const GTMScript: React.FC<GTMScriptProps> = (props) => {
