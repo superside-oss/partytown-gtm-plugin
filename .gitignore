@@ -14,7 +14,7 @@ coverage
 *.local
 .vercel
 .next
-dist
+lib
 preview
 node_modules
 

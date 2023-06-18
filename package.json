@@ -21,12 +21,8 @@
   },
   "scripts": {
     "test.integration": "playwright test",
-    "test.unit": "vitest run",
-    "test": "yarn test.unit && yarn test.integration",
-    "lint": "yarn eslint --fix",
-    "dev": "vite",
-    "build": "vite build && tsc -p ./tsconfig.build.json",
-    "build.preview": "vite build --config ./vite.preview.config.ts"
+    "test": "yarn test.integration",
+    "lint": "yarn eslint --fix"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
