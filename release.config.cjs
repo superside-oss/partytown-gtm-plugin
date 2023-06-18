@@ -1,4 +1,5 @@
 const pluginDir = 'packages/partytown-gtm';
+const rootDir = __dirname;
 
 module.exports = {
   branches: ['main', { name: 'alpha', prerelease: true }],
@@ -68,7 +69,7 @@ module.exports = {
       '@semantic-release/exec',
       {
         execCwd: pluginDir,
-        prepareCmd: 'node scripts/set-version -v ${nextRelease.version} && cp ../../LICENSE .',
+        prepareCmd: `node scripts/set-version -v \${nextRelease.version} && cp ${rootDir}/LICENSE . && cp ${rootDir}/README.md .`,
         publishCmd: 'yarn npm publish'
       }
     ],
