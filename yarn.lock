@@ -1249,7 +1249,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/github@npm:^9.0.0":
+"@semantic-release/github@npm:^9.0.0, @semantic-release/github@npm:^9.0.3":
   version: 9.0.3
   resolution: "@semantic-release/github@npm:9.0.3"
   dependencies:
@@ -1367,6 +1367,7 @@ __metadata:
     "@semantic-release/changelog": ^6.0.3
     "@semantic-release/exec": ^6.0.3
     "@semantic-release/git": ^10.0.1
+    "@semantic-release/github": ^9.0.3
     "@types/react": ^18.0.31
     "@types/react-dom": ^18.0.11
     "@typescript-eslint/eslint-plugin": 5.57.0

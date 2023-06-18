@@ -74,6 +74,12 @@ module.exports = {
       }
     ],
     [
+      '@semantic-release/github',
+      {
+        successComment: false
+      }
+    ]
+    [
       '@semantic-release/git',
       {
         assets: [`${pluginDir}/package.json`, 'CHANGELOG.md'],
