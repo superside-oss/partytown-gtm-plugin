@@ -1,3 +1,10 @@
+## [1.0.0-alpha.9](https://github.com/superside-oss/partytown-gtm-plugin/compare/v1.0.0-alpha.8...v1.0.0-alpha.9) (2023-06-18)
+
+
+### 🔧 Fixes
+
+* missing comma ([3552cf5](https://github.com/superside-oss/partytown-gtm-plugin/commit/3552cf5541b24dfe7db853a871fcf770e7375ef9))
+
 ## [1.0.0-alpha.8](https://github.com/superside-oss/partytown-gtm-plugin/compare/v1.0.0-alpha.7...v1.0.0-alpha.8) (2023-06-18)
 
 
