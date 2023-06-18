@@ -78,7 +78,7 @@ module.exports = {
       {
         successComment: false
       }
-    ]
+    ],
     [
       '@semantic-release/git',
       {
