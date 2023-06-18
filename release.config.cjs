@@ -1,3 +1,5 @@
+const pluginDir = 'packages/partytown-gtm';
+
 module.exports = {
   branches: ['main', { name: 'alpha', prerelease: true }],
   plugins: [
@@ -63,27 +65,17 @@ module.exports = {
     ],
     ['@semantic-release/changelog'],
     [
-      '@semantic-release/npm',
-      {
-        npmPublish: false
-      }
-    ],
-    [
       '@semantic-release/exec',
       {
+        execCwd: pluginDir,
+        prepareCmd: 'node scripts/set-version -v ${nextRelease.version} && cp ../../LICENSE .',
         publishCmd: 'yarn npm publish'
-      }
-    ],
-    [
-      '@semantic-release/gitlab',
-      {
-        successComment: false
       }
     ],
     [
       '@semantic-release/git',
       {
-        assets: ['package.json', 'CHANGELOG.md'],
+        assets: [`${pluginDir}/package.json`, 'CHANGELOG.md'],
         message: 'chore(release): ${nextRelease.version} \n\n${nextRelease.notes} [skip-ci]'
       }
     ]

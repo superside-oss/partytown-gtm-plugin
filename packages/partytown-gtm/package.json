@@ -1,5 +1,21 @@
 {
   "name": "@superside-oss/partytown-gtm",
+  "version": "1.0.0-alpha.5",
+  "license": "MIT",
+  "author": "Slawek Kolodziej <slawek.kolodziej@superside.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/superside-oss/partytown-gtm-plugin"
+  },
+  "keywords": [
+    "partytown",
+    "google tag manager",
+    "tag manager",
+    "gtm"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "./lib/script.js",
   "types": "./lib/script.d.ts",
   "exports": {
@@ -43,6 +59,7 @@
     "npm-run-all": "^4.1.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "semver": "^7.5.2",
     "typescript": "^5.0.4"
   },
   "peerDependencies": {
