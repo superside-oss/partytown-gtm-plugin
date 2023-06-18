@@ -3,9 +3,9 @@ import { Partytown } from '@builder.io/partytown/react';
 import {
   GTMScript,
   GTM_TAG_ASSISTANT_ACCESSOR,
-  GTM_TAG_ASSISTANT_FORWARDER
+  GTM_TAG_ASSISTANT_FORWARDER,
+  partytownResolveUrl
 } from '@superside-oss/partytown-gtm';
-import { partytownResolveUrl } from '@superside-oss/partytown-gtm/util';
 
 export function ThirdParty() {
   return (

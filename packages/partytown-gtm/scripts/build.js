@@ -2,6 +2,7 @@ const { join, resolve } = require('node:path');
 const { program, Option } = require('commander');
 const esbuild = require('esbuild');
 const buildSnippetPlugin = require('./buildSnippetPlugin');
+const buildIndexPlugin = require('./buildIndexPlugin');
 
 const rootDir = resolve(__dirname, '..');
 const sourceDir = join(rootDir, 'src');
@@ -32,14 +33,18 @@ async function buildCode(options) {
 }
 
 function getEsbuildConfig(options) {
-  const sharedOptions = {
+  const formatConfig = getEsbuildFormat(options);
+
+  const sharedConfig = {
     bundle: true,
     platform: 'browser',
     minify: options.debug === true ? false : true,
     logLevel: 'info'
   };
 
-  const baseConfig = {
+  return {
+    ...sharedConfig,
+    ...formatConfig,
     entryPoints: [
       join(sourceDir, 'script.tsx'),
       join(sourceDir, 'util.ts')
@@ -48,22 +53,30 @@ function getEsbuildConfig(options) {
     tsconfig: join(rootDir, 'tsconfig.json'),
     external: ['react', 'react-dom'],
     plugins: [
-      buildSnippetPlugin(/\/snippets\/tagAssistant(Main|Worker)\.ts$/, null, sharedOptions),
+      buildIndexPlugin(
+        join(sourceDir, 'index.ts'),
+        {
+          ...sharedConfig,
+          ...formatConfig,
+          outdir: join(rootDir, 'lib'),
+        }
+      ),
+      buildSnippetPlugin(/\/snippets\/tagAssistant(Main|Worker)\.ts$/, null, sharedConfig),
       buildSnippetPlugin(
         /\/snippets\/gtmSnippet\.ts$/,
         (str) => str.replace(/["']__GTM_ID__["']/, 'props.gtmId'),
-        sharedOptions
+        sharedConfig
       )
     ],
     // watch: options.watch ? true : false,
     minify: options.debug === true ? false : true
   };
+}
 
+function getEsbuildFormat(options) {
   switch (options.format) {
     case 'esm':
       return {
-        ...sharedOptions,
-        ...baseConfig,
         format: 'esm',
         outExtension: {
           '.js': '.mjs'
@@ -72,9 +85,10 @@ function getEsbuildConfig(options) {
     case 'cjs':
     default:
       return {
-        ...sharedOptions,
-        ...baseConfig,
-        format: 'cjs'
+        format: 'cjs',
+        outExtension: {
+          '.js': '.cjs'
+        }
       };
   }
 }

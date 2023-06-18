@@ -4,8 +4,7 @@ import { Inter } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export async function generateMetadata(params) {
-  console.log(params, '<--params')
+export async function generateMetadata(params: any) {
   const suffix = params?.page ? `- ${params?.page}` : '';
 
   return {
