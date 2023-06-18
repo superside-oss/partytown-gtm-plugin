@@ -1,4 +1,4 @@
-import { isUrlAllowed } from '@superside-oss/partytown-gtm/lib/util';
+import { isUrlAllowed } from '@superside-oss/partytown-gtm/util';
 
 const PASS_THROUGH_HEADERS = [
   'content-type',
