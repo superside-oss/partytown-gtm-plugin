@@ -2,7 +2,7 @@ const pluginDir = 'packages/partytown-gtm';
 const rootDir = __dirname;
 
 module.exports = {
-  branches: ['main', { name: 'alpha', prerelease: true }],
+  branches: ['main', { name: 'alpha', prerelease: true, channel: 'alpha' }],
   plugins: [
     [
       '@semantic-release/commit-analyzer',
