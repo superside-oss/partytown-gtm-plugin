@@ -1,3 +1,11 @@
+## [1.0.0-alpha.10](https://github.com/superside-oss/partytown-gtm-plugin/compare/v1.0.0-alpha.9...v1.0.0-alpha.10) (2023-08-11)
+
+
+### 💉 Improvements
+
+* **deps:** bump tough-cookie from 4.1.2 to 4.1.3 ([63f1029](https://github.com/superside-oss/partytown-gtm-plugin/commit/63f1029604fb765c9b7cd5a7a14bcb9033a5390f))
+* **deps:** bump word-wrap from 1.2.3 to 1.2.4 ([a1e3625](https://github.com/superside-oss/partytown-gtm-plugin/commit/a1e36256d9b515688129bba7ba3b923e70bb9242))
+
 ## [1.0.0-alpha.9](https://github.com/superside-oss/partytown-gtm-plugin/compare/v1.0.0-alpha.8...v1.0.0-alpha.9) (2023-06-18)
 
 
