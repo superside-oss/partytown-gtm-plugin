@@ -1405,7 +1405,7 @@ __metadata:
     npm-run-all: ^4.1.5
     react: ^18.2.0
     react-dom: ^18.2.0
-    semver: ^7.5.2
+    semver: ^7.5.4
     typescript: ^5.0.4
   peerDependencies:
     react: "*"
@@ -8818,7 +8818,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.5.1, semver@npm:^7.5.2":
+"semver@npm:^7.5.1":
   version: 7.5.2
   resolution: "semver@npm:7.5.2"
   dependencies:
@@ -8826,6 +8826,17 @@ __metadata:
   bin:
     semver: bin/semver.js
   checksum: 3fdf5d1e6f170fe8bcc41669e31787649af91af7f54f05c71d0865bb7aa27e8b92f68b3e6b582483e2c1c648008bc84249d2cd86301771fe5cbf7621d1fe5375
+  languageName: node
+  linkType: hard
+
+"semver@npm:^7.5.4":
+  version: 7.5.4
+  resolution: "semver@npm:7.5.4"
+  dependencies:
+    lru-cache: ^6.0.0
+  bin:
+    semver: bin/semver.js
+  checksum: 12d8ad952fa353b0995bf180cdac205a4068b759a140e5d3c608317098b3575ac2f1e09182206bf2eb26120e1c0ed8fb92c48c592f6099680de56bb071423ca3
   languageName: node
   linkType: hard
 
