@@ -1,3 +1,15 @@
+## [1.0.0-alpha.11](https://github.com/superside-oss/partytown-gtm-plugin/compare/v1.0.0-alpha.10...v1.0.0-alpha.11) (2023-08-28)
+
+
+### 🧩 Features
+
+* add first README ([70f7488](https://github.com/superside-oss/partytown-gtm-plugin/commit/70f74887391600ddcc6f8187e43eaf6f7d19a859))
+
+
+### 💉 Improvements
+
+* upgrade semver ([77ddb1a](https://github.com/superside-oss/partytown-gtm-plugin/commit/77ddb1a5a8514e241ca4234dbeb9f246f34d80b0))
+
 ## [1.0.0-alpha.10](https://github.com/superside-oss/partytown-gtm-plugin/compare/v1.0.0-alpha.9...v1.0.0-alpha.10) (2023-08-11)
 
 
