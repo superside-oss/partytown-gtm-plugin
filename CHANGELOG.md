@@ -1,3 +1,16 @@
+## [1.0.0-alpha.12](https://github.com/superside-oss/partytown-gtm-plugin/compare/v1.0.0-alpha.11...v1.0.0-alpha.12) (2023-09-04)
+
+
+### 💉 Improvements
+
+* build exclusively for esm ([aaa0bad](https://github.com/superside-oss/partytown-gtm-plugin/commit/aaa0bade45669e048c08a6b3ada40e2a4dcca2a9))
+
+
+### 🔧 Fixes
+
+* convert partytown-gtm to esm ([23e931a](https://github.com/superside-oss/partytown-gtm-plugin/commit/23e931ae29614ca41542f2909b95ea9cb77031b8))
+* keep scripts/set-version as cjs ([f8a5e8c](https://github.com/superside-oss/partytown-gtm-plugin/commit/f8a5e8c30733eb732bdfad7499fc6a8aae3ddcf8))
+
 ## [1.0.0-alpha.11](https://github.com/superside-oss/partytown-gtm-plugin/compare/v1.0.0-alpha.10...v1.0.0-alpha.11) (2023-08-28)
 
 
