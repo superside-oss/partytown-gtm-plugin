@@ -69,7 +69,7 @@ module.exports = {
       '@semantic-release/exec',
       {
         execCwd: pluginDir,
-        prepareCmd: `node scripts/set-version -v \${nextRelease.version} && cp ${rootDir}/LICENSE . && cp ${rootDir}/README.md .`,
+        prepareCmd: `node scripts/set-version.cjs -v \${nextRelease.version} && cp ${rootDir}/LICENSE . && cp ${rootDir}/README.md .`,
         publishCmd: 'yarn npm publish'
       }
     ],
