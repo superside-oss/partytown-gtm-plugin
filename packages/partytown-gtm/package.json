@@ -17,51 +17,36 @@
     "access": "public"
   },
   "type": "module",
-  "main": "./lib/index.cjs",
+  "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "exports": {
     "./util": {
       "import": {
         "types": "./lib/util.d.ts",
         "default": "./lib/util.js"
-      },
-      "require": {
-        "types": "./lib/util.d.ts",
-        "default": "./lib/util.cjs"
       }
     },
     "./script": {
       "import": {
         "types": "./lib/script.d.ts",
         "default": "./lib/script.js"
-      },
-      "require": {
-        "types": "./lib/script.d.ts",
-        "default": "./lib/script.cjs"
       }
     },
     ".": {
       "import": {
         "types": "./lib/index.d.ts",
         "default": "./lib/index.js"
-      },
-      "require": {
-        "types": "./lib/index.d.ts",
-        "default": "./lib/index.cjs"
       }
     }
   },
   "scripts": {
-    "build.cjs": "node scripts/build -f cjs",
-    "build.esm": "node scripts/build -f esm",
+    "build.js": "node scripts/build",
     "build.ts": "tsc",
     "build": "npm-run-all -l -p 'build.**'",
-    "watch.cjs": "yarn build.cjs -w",
-    "watch.esm": "yarn build.esm -w",
+    "watch.js": "yarn build.js -w",
     "watch.ts": "tsc --watch --preserveWatchOutput",
     "watch": "npm-run-all -l -p 'watch.**'",
-    "dev.cjs": "yarn build.cjs -w -d",
-    "dev.esm": "yarn build.esm -w -d",
+    "dev.js": "yarn build.js -w -d",
     "dev": "npm-run-all -l -p watch.ts 'dev.**'"
   },
   "devDependencies": {

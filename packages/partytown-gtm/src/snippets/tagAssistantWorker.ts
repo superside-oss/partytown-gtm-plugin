@@ -1,4 +1,4 @@
-import { ReceiverFunction } from './tagAssistantCommon';
+import { ReceiverFunction } from './tagAssistantCommon.js';
 
 /**
  * Implements the worker side of the Tag Assistant integration.

@@ -1,2 +1,2 @@
-export * from './script';
-export * from './util';
+export * from './script.js';
+export * from './util.js';

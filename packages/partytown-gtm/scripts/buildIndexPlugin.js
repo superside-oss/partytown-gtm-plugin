@@ -10,6 +10,7 @@ export default function buildIndexPlugin(paths, esbuildOptions) {
         await esbuild.build({
           ...esbuildOptions,
           entryPoints,
+          format: 'esm',
           bundle: false,
         });
       });

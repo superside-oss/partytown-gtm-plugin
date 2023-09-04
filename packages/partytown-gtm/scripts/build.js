@@ -1,5 +1,5 @@
 import { join, resolve, dirname } from 'node:path';
-import { program, Option } from 'commander';
+import { program } from 'commander';
 import esbuild from 'esbuild';
 import buildSnippetPlugin from './buildSnippetPlugin.js';
 import buildIndexPlugin from './buildIndexPlugin.js';
@@ -11,11 +11,6 @@ const sourceDir = join(rootDir, 'src');
 program
   .option('-w, --watch')
   .option('-d, --debug')
-  .addOption(
-    new Option('-f, --format <format>', 'output format')
-      .choices(['cjs', 'esm'])
-      .default('cjs')
-  )
   .action((options) => {
     return buildCode(options);
   })
@@ -34,8 +29,6 @@ async function buildCode(options) {
 }
 
 function getEsbuildConfig(options) {
-  const formatConfig = getEsbuildFormat(options);
-
   const sharedConfig = {
     bundle: true,
     platform: 'browser',
@@ -43,25 +36,20 @@ function getEsbuildConfig(options) {
     logLevel: 'info'
   };
 
+  const outDir = join(rootDir, 'lib');
+
   return {
     ...sharedConfig,
-    ...formatConfig,
-    entryPoints: [
-      join(sourceDir, 'script.tsx'),
-      join(sourceDir, 'util.ts')
-    ],
-    outdir: join(rootDir, 'lib'),
+    entryPoints: [join(sourceDir, 'script.tsx'), join(sourceDir, 'util.ts')],
+    outdir: outDir,
+    format: 'esm',
     tsconfig: join(rootDir, 'tsconfig.json'),
     external: ['react', 'react-dom'],
     plugins: [
-      buildIndexPlugin(
-        join(sourceDir, 'index.ts'),
-        {
-          ...sharedConfig,
-          ...formatConfig,
-          outdir: join(rootDir, 'lib'),
-        }
-      ),
+      buildIndexPlugin(join(sourceDir, 'index.ts'), {
+        ...sharedConfig,
+        outdir: outDir
+      }),
       buildSnippetPlugin(/\/snippets\/tagAssistant(Main|Worker)\.ts$/, null, sharedConfig),
       buildSnippetPlugin(
         /\/snippets\/gtmSnippet\.ts$/,
@@ -74,19 +62,3 @@ function getEsbuildConfig(options) {
   };
 }
 
-function getEsbuildFormat(options) {
-  switch (options.format) {
-    case 'esm':
-      return {
-        format: 'esm',
-      };
-    case 'cjs':
-    default:
-      return {
-        format: 'cjs',
-        outExtension: {
-          '.js': '.cjs'
-        }
-      };
-  }
-}

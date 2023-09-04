@@ -1,4 +1,4 @@
-import { ReceiverFunction, TagAssistantTunnelApi } from './tagAssistantCommon';
+import { ReceiverFunction, TagAssistantTunnelApi } from './tagAssistantCommon.js';
 
 /**
  * Implements main thread side of the Tag Assistant integration.

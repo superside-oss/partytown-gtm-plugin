@@ -1,8 +1,8 @@
 import React from 'react';
-import tagAssistantMain from './snippets/tagAssistantMain';
-import tagAssistantWorker from './snippets/tagAssistantWorker';
+import tagAssistantMain from './snippets/tagAssistantMain.js';
+import tagAssistantWorker from './snippets/tagAssistantWorker.js';
 // @ts-ignore
-import gtmSnippet from './snippets/gtmSnippet';
+import gtmSnippet from './snippets/gtmSnippet.js';
 
 /**
  * The name of the global function declared inside the worker and accessible from
