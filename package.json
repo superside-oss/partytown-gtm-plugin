@@ -13,11 +13,11 @@
     ".": {
       "import": {
         "types": "./lib/index.d.ts",
-        "default": "./lib/index.mjs"
+        "default": "./lib/index.js"
       },
       "require": {
         "types": "./lib/index.d.ts",
-        "default": "./lib/index.js"
+        "default": "./lib/index.cjs"
       }
     }
   },

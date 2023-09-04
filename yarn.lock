@@ -1341,7 +1341,7 @@ __metadata:
   resolution: "@superside-oss/partytown-gtm-integration-nextjs@workspace:packages/integration/nextjs"
   dependencies:
     "@builder.io/partytown": ^0.8.0
-    "@superside-oss/partytown-gtm": "workspace:^"
+    "@superside-oss/partytown-gtm": "workspace:*"
     "@types/node": 20.2.3
     "@types/react": 18.2.7
     "@types/react-dom": 18.2.4
@@ -1396,7 +1396,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@superside-oss/partytown-gtm@workspace:^, @superside-oss/partytown-gtm@workspace:packages/partytown-gtm":
+"@superside-oss/partytown-gtm@workspace:*, @superside-oss/partytown-gtm@workspace:packages/partytown-gtm":
   version: 0.0.0-use.local
   resolution: "@superside-oss/partytown-gtm@workspace:packages/partytown-gtm"
   dependencies:

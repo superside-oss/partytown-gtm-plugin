@@ -1,10 +1,11 @@
-const { join, resolve } = require('node:path');
-const { program, Option } = require('commander');
-const esbuild = require('esbuild');
-const buildSnippetPlugin = require('./buildSnippetPlugin');
-const buildIndexPlugin = require('./buildIndexPlugin');
+import { join, resolve, dirname } from 'node:path';
+import { program, Option } from 'commander';
+import esbuild from 'esbuild';
+import buildSnippetPlugin from './buildSnippetPlugin.js';
+import buildIndexPlugin from './buildIndexPlugin.js';
 
-const rootDir = resolve(__dirname, '..');
+const currentFileUrl = new URL(import.meta.url);
+const rootDir = resolve(dirname(currentFileUrl.pathname), '..');
 const sourceDir = join(rootDir, 'src');
 
 program
@@ -78,9 +79,6 @@ function getEsbuildFormat(options) {
     case 'esm':
       return {
         format: 'esm',
-        outExtension: {
-          '.js': '.mjs'
-        }
       };
     case 'cjs':
     default:

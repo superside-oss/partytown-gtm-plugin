@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@builder.io/partytown": "^0.8.0",
-    "@superside-oss/partytown-gtm": "workspace:^",
+    "@superside-oss/partytown-gtm": "workspace:*",
     "@types/node": "20.2.3",
     "@types/react": "18.2.7",
     "@types/react-dom": "18.2.4",

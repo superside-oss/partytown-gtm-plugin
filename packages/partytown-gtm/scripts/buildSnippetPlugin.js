@@ -1,6 +1,6 @@
-const esbuild = require('esbuild');
+import esbuild from 'esbuild';
 
-function buildSnippetPlugin(filter, replacer, esbuildOptions = {}) {
+export default function buildSnippetPlugin(filter, replacer, esbuildOptions = {}) {
   const cleanUpOutput = (str) => str
     .trim()
     // Remove use strict invocation
@@ -35,5 +35,3 @@ function buildSnippetPlugin(filter, replacer, esbuildOptions = {}) {
     }
   };
 }
-
-module.exports = buildSnippetPlugin;

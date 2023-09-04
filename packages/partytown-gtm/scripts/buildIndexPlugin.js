@@ -1,6 +1,6 @@
-const esbuild = require('esbuild');
+import esbuild from 'esbuild';
 
-function buildIndexPlugin(paths, esbuildOptions) {
+export default function buildIndexPlugin(paths, esbuildOptions) {
   const entryPoints = Array.isArray(paths) ? paths : [paths];
 
   return {
@@ -16,5 +16,3 @@ function buildIndexPlugin(paths, esbuildOptions) {
     }
   };
 }
-
-module.exports = buildIndexPlugin;
